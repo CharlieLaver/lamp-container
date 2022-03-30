@@ -1,5 +1,5 @@
 <?php
-die("here");
+die("here I am");
 $host = "mysql-server";
 $user = "root";
 $pass = "secret";
