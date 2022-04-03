@@ -1,0 +1,19 @@
+{
+    "name": "clvr7/dugong",
+    "type": "framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "clvr7",
+            "email": "charlielaver7@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^8.83"
+    },
+    "autoload": {
+        "classmap": [
+            "models"
+         ]
+    }
+}
