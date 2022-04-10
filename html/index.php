@@ -1,35 +1,31 @@
 <?php
 
-    require "vendor/autoload.php";
+require "vendor/autoload.php";
+require "config/database.php";
 
-    ## Show errors
-    error_reporting(E_ALL); 
-    ini_set('display_errors', '1');
+##### TESTING CAPSULE DB #####
 
-    use Illuminate\Database\Capsule\Manager as Capsule;
-    
-    ## Setup Database Capsule
-    $capsule = new Capsule;
-    
-    $capsule->addConnection([
-        "driver" => "mysql",
-        "host" =>"mysql-server",
-        "database" => "app1",
-        "username" => "root",
-        "password" => "secret"
-    ]);
+// use Models\Test;
 
-    $capsule->setAsGlobal();
-    $capsule->bootEloquent();
+// Test::create([
+//     "test" => "hello world"
+// ]);
 
-    #####
+// $x = Test::all();
 
-    use Models\Test;
+// print_r($x);
 
-    Test::create([
-        "test" => "hello world"
-    ]);
+##### TESTING ROUTER PLUGIN ####
 
-    $x = Test::all();
-
-    print_r($x);
+$router = new Router;
+// How GET requests will be defined
+$router->get('/some/route', function($request) {
+    // The $request argument of the callback 
+    // will contain information about the request
+    return "Content";
+});
+// How POST requests will be defined
+$router->post('/some/route', function($request) {
+    // How to get data from request body
+    $body = $request->getBody();
+});
