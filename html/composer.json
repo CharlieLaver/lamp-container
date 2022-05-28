@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "illuminate/database": "^8.83"
+        "illuminate/database": "^8.83",
+        "nikic/fast-route": "^1.3"
     },
     "autoload": {
         "classmap": [
