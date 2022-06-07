@@ -5,10 +5,10 @@
     index.php is only used for setting up the config of app.
     All routes should be defined in the routes.php file.
 
-    On inital setup of dugong just enter your database connection details into the
-    capsule connection setup method called on line 30.
+    On inital setup of walrus just enter your database connection details into the
+    capsule->addConnection method (called on line 30).
 
-    Dugong uses the follwoing packages for config:
+    Walrus uses the follwoing packages for config:
         - https://github.com/illuminate/database
         - https://github.com/nikic/FastRoute
 
@@ -38,9 +38,12 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-require "routes.php";
 
-## ROUTER ##
+$dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
+    
+    require "routes.php";
+
+});
 
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
