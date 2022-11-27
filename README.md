@@ -1,3 +1,3 @@
-# Walrus
+# LAMP Stack Container
 
-Walrus is a containerized LAMP enviroment that allows devlopers to quickly set up microservices using PHP.
+A containerised PHP LAMP stack environment.
