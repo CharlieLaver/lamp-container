@@ -5,10 +5,10 @@
     index.php is only used for setting up the config of app.
     All routes should be defined in the routes.php file.
 
-    On inital setup of walrus just enter your database connection details into the
+    On inital setup just enter your database connection details into the
     capsule->addConnection method (called on line 30).
 
-    Walrus uses the follwoing packages for config:
+    The following packages are used:
         - https://github.com/illuminate/database
         - https://github.com/nikic/FastRoute
 
